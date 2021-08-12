@@ -1,3 +1,18 @@
+When the CP8945 phone boots up it first tries to download cofig files from a tftp server.
+
+A file must exist in the root or base TFTP directory which has a fie name of the form:
+
+(phone MacID).conf.xml
+
+The phone will specifically look for a file like this and if it does not find it the phoen will not boot.
+When the phoen is booted correctly only a white LED will be on and the scrren will be dark in standby.
+
+When you pick up the phone the lines will be configured as in the (madaddress.conf.xml) file.
+
+use the example file provided. Just change it to your mad address and edit the file.
+And place in the /srv/tftp directory.
+
+
 The conf.xml file msut have the MAC address of your CP8945 as the file name to be picked up from tftp
 
 put the file in your tftp directory:
